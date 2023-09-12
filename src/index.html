@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
     <title>Butchery | Beli Daging Segar Dengan Kualitas Terbaik Disini</title>
     <link
       rel="shortcut icon"
@@ -13,6 +18,9 @@
     <style>
       #fitur button:hover svg path {
         fill: white;
+      }
+      .splide__track ul li img {
+        width: 99.5%;
       }
     </style>
   </head>
@@ -170,8 +178,34 @@
         <div class="grid grid-cols-12">
           <div class="col-span-8 mx-auto">
             <div class="flex justify-between relative items-center group">
-              <img src="asset/hiro/iklan/big.svg" alt="" />
-              <a
+              <section class="splide" aria-label="Splide Basic HTML Example">
+                <div class="splide__arrows">
+                  <button class="splide__arrow splide__arrow--prev">
+                    <img src="asset/hiro/left.svg" alt="" />
+                  </button>
+                  <button class="splide__arrow splide__arrow--next">
+                    <img src="asset/hiro/right.svg" alt="" />
+                  </button>
+                </div>
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="asset/hiro/iklan/big.svg" alt="" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="asset/hiro/iklan/carosel2.svg" alt="" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="asset/hiro/iklan/carosel3.svg" alt="" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="asset/hiro/iklan/carosel4.svg" alt="" />
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <!-- <img src="asset/hiro/iklan/big.svg" alt="" /> -->
+              <!-- <a
                 href=""
                 class="bg-black bg-opacity-30 absolute py-7 px-4 hidden group-hover:block active:bg-opacity-80"
                 ><img src="asset/hiro/left.svg" alt=""
@@ -180,21 +214,23 @@
                 href=""
                 class="bg-black bg-opacity-30 absolute right-0 py-7 px-4 hidden group-hover:block active:bg-opacity-80"
                 ><img src="asset/hiro/right.svg" alt=""
-              /></a>
+              /></a> -->
             </div>
-            <div class="flex justify-center gap-2 pt-5">
-              <div class="bg-[#D10B05] h-[10px] w-[10px] rounded-full">
-                <!-- <img src="asset/hiro/dootred.svg" alt="" /> -->
-              </div>
+            <!-- <div class="flex justify-center gap-2 pt-5">
+              <div class="bg-[#D10B05] h-[10px] w-[10px] rounded-full"></div>
               <div class="bg-slate-300 h-[10px] w-[10px] rounded-full"></div>
               <div class="bg-slate-300 h-[10px] w-[10px] rounded-full"></div>
               <div class="bg-slate-300 h-[10px] w-[10px] rounded-full"></div>
-            </div>
+            </div> -->
           </div>
           <div class="col-span-4">
-            <img src="asset/hiro/iklan/smallUp.svg" alt="" class="mb-2" />
+            <img
+              src="asset/hiro/iklan/carosel1.svg"
+              alt=""
+              class="mb-2 w-full"
+            />
 
-            <img src="asset/hiro/iklan/smallDown.svg" alt="" />
+            <img src="asset/hiro/iklan/smallDown.svg" alt="" class="w-full" />
           </div>
         </div>
       </div>
@@ -1819,5 +1855,12 @@
       </div>
     </footer>
     <!-- Footer -->
+
+    <script>
+      var splide = new Splide(".splide", {
+        type: "loop",
+      });
+      splide.mount();
+    </script>
   </body>
 </html>
