@@ -1411,6 +1411,14 @@ video {
   outline-color: #D10B05;
 }
 
+.active\:bg-opacity-100:active {
+  --tw-bg-opacity: 1;
+}
+
+.active\:bg-opacity-80:active {
+  --tw-bg-opacity: 0.8;
+}
+
 .group:hover .group-hover\:block {
   display: block;
 }
